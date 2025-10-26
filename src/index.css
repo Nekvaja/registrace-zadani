@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 26rem;
+  max-width: 30rem;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -25,6 +25,22 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: 400;
-  color: rgb(100, 104, 123)
+  color: #556080;
+}
+
+.avatar-container {
+  border: 15px solid rgb(222, 233, 239);
+  box-shadow: -8px 8px 10px rgb(166, 169, 171);
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+  display:flex;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: -8px 8px 10px rgb(166, 169, 171);
 }
 

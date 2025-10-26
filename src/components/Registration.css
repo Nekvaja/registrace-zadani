@@ -5,6 +5,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .form-inputs {
@@ -13,11 +14,12 @@ form {
     align-items: center;
     gap: 1rem;
     margin: 3rem;
+    margin-top: 10rem;
 }
 
 input {
     border: none;
-    background-color: rgb(106, 111, 134);
+    background-color: #556080;
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: 300;
@@ -33,7 +35,7 @@ button {
     margin-bottom: 1.5rem;
     border: none;
     border-radius: 15px;
-    background-color: rgb(106, 111, 134);
+    background-color: #556080;
     color: white;
     font-size: 1.5rem;
     padding: 0.8rem;
