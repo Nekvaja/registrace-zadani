@@ -1,9 +1,10 @@
-import { Registration } from "./components/registration";
+import { Registration } from "./components/Registration";
+
 
 export const App = () => {
   return (
     <div className="container">
-      <h1>Registrace</h1>
+      <h1>REGISTRATION</h1>
       <Registration/>
     </div>
   );
