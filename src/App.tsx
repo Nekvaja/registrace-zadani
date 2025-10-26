@@ -6,7 +6,7 @@ export const App = () => {
     <div className="container">
       <h1>REGISTRATION</h1>
       <div className="avatar-container">
-        <img src="/user.png" alt="avatar" />
+        <img src="user.png" alt="user-avatar" />
       </div>
       <Registration/>
     </div>
