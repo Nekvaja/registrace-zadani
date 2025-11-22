@@ -2,7 +2,7 @@ import "./Registration.css"
 import { useState } from "react";
 
 
-interface userStructure {
+interface UserStructure {
   userName: string;
   email: string;
   password: string;
@@ -10,44 +10,24 @@ interface userStructure {
 }
 
 export const Registration = () => {
-  const [user, setUser] = useState<userStructure>({
+  const [user, setUser] = useState<UserStructure>({
     userName: "",
     email: "",
     password: "",
     passwordConfirm: "",
   });
 
-  const isValidEmail = (email: string): boolean => {
-    if (email.includes("@")) {
-      return true;
-    }
-    return false;
-  };
+  const isValidEmail = (email: string): boolean => (email.includes("@"));
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const name: string = e.target.name;
-    const value: string = e.target.value;
+     const { value, name} = e.target;
 
     setUser((prev) => {
-      const updatedUser = { ...prev };
+      const updatedUser = { ...prev, [name]: value };
 
-      if (name === "email") {
-        updatedUser.email = value;
-        if (isValidEmail(value) && updatedUser.userName === "") {
-          updatedUser.userName = value.split("@")[0];
-        }
-      }
-
-      if (name === "userName") {
-        updatedUser.userName = value;
-      }
-
-      if (name === "password") {
-        updatedUser.password = value;
-      }
-
-      if (name === "passwordConfirm") {
-        updatedUser.passwordConfirm = value;
+      if (name === "email" && isValidEmail(value) && !prev.userName ) {
+       updatedUser.userName = value.split("@")[0];
       }
 
       return updatedUser;
@@ -94,7 +74,7 @@ export const Registration = () => {
 
         <input
           id="passwordConfirm"
-          type="text"
+          type="password"
           name="passwordConfirm"
           placeholder="Confirm Password"
           aria-label="Confirm Password"
